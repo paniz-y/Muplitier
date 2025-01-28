@@ -1,0 +1,2 @@
+# Muplitier
+# approximate bit multiplier 
