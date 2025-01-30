@@ -27,13 +27,13 @@ ARCHITECTURE test OF FourByFourMul_tb IS
             WAIT FOR 10 ns;
             x <= "1100";
             y <= "0010";
-            WAIT FOR 10 ns;
+            WAIT FOR 15 ns;
             x <= "0011";
             y <= "1001";
-            WAIT FOR 10 ns;
+            WAIT FOR 20 ns;
             x <= "1100";
             y <= "1010";
-            WAIT FOR 10 ns;
+            WAIT FOR 25 ns;
 
         END PROCESS; 
 END test;           
