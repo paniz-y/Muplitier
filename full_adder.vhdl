@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY fullAdder IS 
-    PORT (Cin, x, y : IN STD_LOGIC;
+    PORT (x, y, Cin : IN STD_LOGIC;
           s, Cout   : OUT STD_LOGIC);
 END fullAdder;
 
