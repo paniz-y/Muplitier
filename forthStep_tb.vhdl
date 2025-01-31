@@ -1,10 +1,9 @@
-
-LIBRARY IEEE; 
-USE IEEE.std_logic_1164.ALL; 
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
 ENTITY FourByFourMul_2_tb IS 
 END ENTITY; 
-
+  
 ARCHITECTURE test OF FourByFourMul_2_tb IS 
     COMPONENT FourByFourMul_2 IS 
         PORT (x, y : IN STD_LOGIC_VECTOR(3 downto 0); 
