@@ -2,40 +2,17 @@ library IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY TwoByTwoMul IS 
-  PORT (A, B : IN bit_vector(1 downto 0);
-        P : OUT bit_vector(3 downto 0)
+  PORT (x, y : IN STD_LOGIC_VECTOR(1 downto 0);
+        P : OUT STD_LOGIC_VECTOR(3 downto 0)
     );
 END TwoByTwoMul;
 
 ARCHITECTURE TwoMul OF TwoByTwoMul IS
 BEGIN
-	PROCESS(A,B) IS
-	BEGIN
-		CASE A IS
-			WHEN "00" =>
-				--IF B = "00" THEN P <= "0000";
-				--ELSIF B = "01" THEN P <= "0000";
-				--ELSIF B = "10" THEN P <= "0000";
-				P <= "0000";
-				--END IF;
-			WHEN "01" =>
-				IF B = "00" THEN P <= "0000";
-				ELSIF B = "01" THEN P <= "0001";
-				ELSIF B = "10" THEN P <= "0010";
-				ELSE P <= "0011";
-				END IF;
-			WHEN "10" =>
-				IF B = "00" THEN P <= "0000";
-				ELSIF B = "01" THEN P <= "0010";
-				ELSIF B = "10" THEN P <= "0100";
-				ELSE P <= "0110";
-				END IF;
-			WHEN "11" =>
-				IF B = "00" THEN P <= "0000";
-				ELSIF B = "01" THEN P <= "0011";
-				ELSIF B = "10" THEN P <= "0110";
-				ELSE P <= "1001";
-				END IF;
-		END CASE;
-END PROCESS;
+	--PROCESS(x,y) IS
+	--BEGIN
+P(0) <= x(0) AND y(0);
+P(1) <= (y(0) AND x(1)) XOR (y(1) AND x(0));
+P(2) <= x(1) and y(1);
+P(3) <= '0';
 END ARCHITECTURE;
