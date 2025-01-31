@@ -25,8 +25,8 @@ ARCHITECTURE test OF TwoByTwoMul_tb IS
 
     inputs_proc:process
     BEGIN
-        x <= "00";
-        y <= "00";
+        x <= "11";
+        y <= "11";
         WAIT FOR 10 ns;
 
         x <= "00";
